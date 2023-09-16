@@ -12,8 +12,8 @@ and "dog" and "o d g".
 """
 
 
-# quick and easy way to do it in Python. For an interview or 
-# learning setting, it may not sufficiently help to explain 
+# quick and easy way to do it in Python. For an interview or
+# learning setting, it may not sufficiently help to explain
 # the process
 def is_anagram_not_optimal(string1: str, string2: str) -> bool:
     string1 = string1.replace(" ", "").replace(".", "").lower()
@@ -29,7 +29,7 @@ def is_anagram_optimal(string1: str, string2: str) -> bool:
     string1 = string1.replace(" ", "").replace(".", "").lower()
     string2 = string2.replace(" ", "").replace(".", "").lower()
 
-    # if the strings are not the same length, they're definitely 
+    # if the strings are not the same length, they're definitely
     # not anagrams!
     if len(string1) != len(string2):
         return False
@@ -50,7 +50,7 @@ def is_anagram_optimal(string1: str, string2: str) -> bool:
     if len(string1) != sum(count.values()):
         return False
 
-    # if all is equal, we should be able to "deduct" every letter in 
+    # if all is equal, we should be able to "deduct" every letter in
     # string 2 from the "bank" we created using string 1
     for letter in string2:
         if letter in count:
